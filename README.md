@@ -5,5 +5,5 @@ Notes and Assumptions:
 2. All X values were divided by 1000000 (1e6), which means all the training and predicted values for receipt counts are in millions.
 
 Sanity Check for Results:
-1. Since I implemented linear regression in Pytorch, verifying the results from the numpy's polyfit funtion seemed like a decent move. Polyfit function of the numpy library estimates the best-fit line for the given X and y values, and gives the parameters m (slope) and c (intercept) of the equation y = mX + c (when degree = 1). The polyfit function estimated the parameters as: m = 7.1688581713286625 and c = 221.8771393030302. 
+1. Since I implemented linear regression in Pytorch, verifying the results from the numpy's polyfit funtion seemed like a decent move. Polyfit function of the numpy library estimates the best-fit line for the given X and y values, and gives the parameters m (slope) and c (intercept) of the equation y = mX + c (when degree = 1). The polyfit function estimated the equation as: y = 7.17*X + 221.88. My model estimated it as y = 7.81x + 216.63, which is pretty close. 
 2.

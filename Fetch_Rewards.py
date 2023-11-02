@@ -16,15 +16,13 @@ class regressionModel(nn.Module):
 new_model = regressionModel()
 new_model.load_state_dict(torch.load('fetch_model.pkl'))
 
+st.title("Fetch Rewards")
+st.header("Estimate Receipt Counts for 2022")
+
 month = st.text_input("Enter month of 2022 for which we want to predict the sales: ")
 
 user_input = np.array([int(month)], dtype=np.float32)
 user_input = Variable(torch.from_numpy(user_input.reshape(-1, 1)))
 user_output = new_model(user_input)
-
-st.title("Fetch Rewards")
-st.header("Estimate Receipt Counts for 2022")
-
-search_query = st.text_input("Search Offers by Category, Brand or Retailer")
 
 st.write(user_output)

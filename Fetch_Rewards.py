@@ -64,5 +64,6 @@ graph_input = Variable(torch.from_numpy(graph_input.reshape(-1, 1)))
 graph_output = new_model(graph_input).tolist()
 graph_output = sum(graph_output, [])
 
+dropdown = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
 df = pd.DataFrame({"Months": dropdown, "Receipt_Count_Predicted": graph_output})
 st.line_chart(df.set_index('Months'))

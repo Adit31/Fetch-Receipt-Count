@@ -21,7 +21,8 @@ st.title("Fetch Rewards")
 st.header("Estimate Receipt Counts for 2022")
 
 st.write("Select the month of 2022 for which you'd like to see predict the sales")
-selected_option = st.selectbox("Choose one", ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"])
+dropdown = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
+selected_option = st.selectbox("Choose one", dropdown)
 selected_option = str(selected_option)
 
 if selected_option == 'January':
@@ -63,5 +64,5 @@ graph_input = Variable(torch.from_numpy(graph_input.reshape(-1, 1)))
 graph_output = new_model(graph_input).tolist()
 graph_output = sum(graph_output, [])
 
-df = pd.DataFrame({"Months": months, "Receipt_Count_Predicted": graph_output})
+df = pd.DataFrame({"Months": dropdown, "Receipt_Count_Predicted": graph_output})
 st.line_chart(df.set_index('Months'))

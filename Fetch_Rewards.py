@@ -22,7 +22,7 @@ st.header("Estimate Receipt Counts for 2022")
 st.write("Select the month of 2022 for which you'd like to see predict the sales")
 selected_option = st.selectbox("Choose one", ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"])
 
-st.write(selected_option, type(selected_option))
+st.write(selected_option, type(str(selected_option)))
 month = 13
 user_input = np.array([int(month)], dtype=np.float32)
 user_input = Variable(torch.from_numpy(user_input.reshape(-1, 1)))

@@ -64,4 +64,4 @@ graph_output = new_model(graph_input).tolist()
 graph_output = sum(graph_output, [])
 
 df = pd.DataFrame({"Months": months, "Receipt_Count_Predicted": graph_output})
-st.line_chart(df)
+st.line_chart(graph_output)

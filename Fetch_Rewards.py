@@ -22,7 +22,7 @@ st.header("Estimate Receipt Counts for 2022")
 st.write("Select the month of 2022 for which you'd like to see predict the sales")
 selected_option = st.selectbox("Choose one", ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"])
 
-match str(selected_option):
+match selected_option:
   case 'January':
     st.write("Jan")
   case 'February':

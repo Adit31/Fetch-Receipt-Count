@@ -54,4 +54,4 @@ user_input = np.array([month], dtype=np.float32)
 user_input = Variable(torch.from_numpy(user_input.reshape(-1, 1)))
 user_output = new_model(user_input)
 
-st.write(user_output)
+st.write(user_output.item())

@@ -19,8 +19,10 @@ new_model.load_state_dict(torch.load('fetch_model.pkl'))
 st.title("Fetch Rewards")
 st.header("Estimate Receipt Counts for 2022")
 
-month = st.text_input("Enter month of 2022 for which we want to predict the sales: ", 13)
+st.write("Select the month of 2022 for which you'd like to see predict the sales")
+selected_option = st.selectbox("Select a month", ["January", "February", "March"])
 
+month = 13
 user_input = np.array([int(month)], dtype=np.float32)
 user_input = Variable(torch.from_numpy(user_input.reshape(-1, 1)))
 user_output = new_model(user_input)

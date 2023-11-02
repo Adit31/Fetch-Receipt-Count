@@ -18,7 +18,7 @@ new_model.load_state_dict(torch.load('fetch_model.pkl'))
 
 month = st.text_input("Enter month of 2022 for which we want to predict the sales: ")
 
-user_input = np.array([month], dtype=np.float32)
+user_input = np.array([int(month)], dtype=np.float32)
 user_input = Variable(torch.from_numpy(user_input.reshape(-1, 1)))
 user_output = new_model(user_input)
 

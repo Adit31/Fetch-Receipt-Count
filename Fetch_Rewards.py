@@ -3,6 +3,7 @@ import torch
 import numpy as np
 from torch.autograd import Variable
 import streamlit as st
+import pandas as pd
 
 class regressionModel(nn.Module):
   def __init__(self):
@@ -55,3 +56,12 @@ user_input = Variable(torch.from_numpy(user_input.reshape(-1, 1)))
 user_output = new_model(user_input)
 
 st.write("The predicted receipt count for the month of", selected_option, "is", str(user_output.item())[:7], "Million")
+
+months = [i for i in range(13, 25)]
+graph_input = np.array(months, dtype=np.float32)
+graph_input = Variable(torch.from_numpy(graph_input.reshape(-1, 1)))
+graph_output = new_model(graph_input).tolist()
+graph_output = sum(graph_output, [])
+
+df = pd.DataFrame({"Months": months, "Receipt_Count_Predicted": graph_output})
+st.line_chart(df)

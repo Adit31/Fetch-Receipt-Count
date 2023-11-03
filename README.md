@@ -1,5 +1,12 @@
 # Fetch Receipt Count
 Please go to the Github link to access the codebase: https://github.com/Adit31/Fetch-Receipt-Count/tree/main
+The files in the repo are:
+1. Fetch_Rewards.py: The main file that the web application uses. Has the code for inference and deployment of the ML model.
+2. Fetch_Rewards_Receipt_Count_Training.ipynb: The file contains the code for EDA, training and testing the ML model. Can run directly on Google Colab.
+3. README.md
+4. data_daily.csv
+5. fetch_model.pkl: Weights for the trained model.
+6. requirements.txt
 
 Notes and Assumptions:
 1. The receipt counts in the training set were grouped by the month number because of two reasons: a) The data was fluctuating constantly but the overall trend was positive and the growth rate was quite consistent, and b) We were only going to predict the receipt counts for the entire months in the testing time. Rather than aggregating later, I aggregated early and made the training set simple.

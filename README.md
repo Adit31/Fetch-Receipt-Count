@@ -1,4 +1,5 @@
 # Fetch Receipt Count
+Please go to the Github link to access the codebase: https://github.com/Adit31/Fetch-Receipt-Count/tree/main
 
 Notes and Assumptions:
 1. The receipt counts in the training set were grouped by the month number because of two reasons: a) The data was fluctuating constantly but the overall trend was positive and the growth rate was quite consistent, and b) We were only going to predict the receipt counts for the entire months in the testing time. Rather than aggregating later, I aggregated early and made the training set simple.

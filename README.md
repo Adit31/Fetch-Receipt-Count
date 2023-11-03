@@ -10,3 +10,6 @@ Sanity Check for Results and Evaluation Metric:
 1. Since I implemented linear regression in Pytorch, verifying the results from the numpy's polyfit funtion seemed like a decent move. Polyfit function of the numpy library estimates the best-fit line for the given X and y values, and gives the parameters m (slope) and c (intercept) of the equation y = mX + c (when degree = 1). The polyfit function estimated the equation as: y = 7.17*X + 221.88. My model estimated it as y = 7.81x + 216.63, which is pretty close. 
 2. Growth rate should be consistent over 2021 and 2022 because of the linear correlation. The approximate difference between December 2021 and January 2021 is almost similar to the difference between December 2022 and January 2022, i.e., ~80 Million. This indicates that the model is producing decent results.
 3. MSE loss was used during the training and testing of the model, which showed a declining trend, as it should.
+
+Steps to run the Application:
+1. The app is hosted online and can be directly accessed by clicking on the url: \url{https://fetch-receipt-count.streamlit.app/}

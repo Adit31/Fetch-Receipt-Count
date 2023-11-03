@@ -12,4 +12,5 @@ Sanity Check for Results and Evaluation Metric:
 3. MSE loss was used during the training and testing of the model, which showed a declining trend, as it should.
 
 Steps to run the Application:
-1. The app is hosted online and can be directly accessed by clicking on the url: \url{https://fetch-receipt-count.streamlit.app/}
+1. The app is hosted online and can be directly accessed by clicking on the url: https://fetch-receipt-count.streamlit.app/
+2. If you'd like to build the application locally and then launch it, the container image has been uploaded on docker hub and can be pulled to the local system using the command: 'docker pull adit31/fetch-app:latest'

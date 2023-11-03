@@ -1,6 +1,6 @@
 # Fetch Receipt Count
-Please go to the Github link to access the codebase: https://github.com/Adit31/Fetch-Receipt-Count/tree/main
-The files in the repo are:
+Please go to the Github link to access the codebase: https://github.com/Adit31/Fetch-Receipt-Count/tree/main .
+Files in the repo are:
 1. Fetch_Rewards.py: The main file that the web application uses. Has the code for inference and deployment of the ML model.
 2. Fetch_Rewards_Receipt_Count_Training.ipynb: The file contains the code for EDA, training and testing the ML model. Can run directly on Google Colab.
 3. README.md

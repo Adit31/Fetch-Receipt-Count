@@ -13,4 +13,6 @@ Sanity Check for Results and Evaluation Metric:
 
 Steps to run the Application:
 1. The app is hosted online and can be directly accessed by clicking on the url: https://fetch-receipt-count.streamlit.app/
-2. If you'd like to build the application locally and then launch it, the container image has been uploaded on docker hub and can be pulled to the local system using the command: 'docker pull adit31/fetch-app:latest'
+2. If you'd like to build the application locally and then launch it, the container image has been uploaded on docker hub and can be pulled to the local system using the command: docker pull adit31/fetch-app:latest
+3. After pulling the docker image to your repository, run the container by the command: docker run -p 8501:8501 fetch-app
+4. It might take some time to pull the docker image and run it because the file size is quite big, i.e., ~8 GB.
